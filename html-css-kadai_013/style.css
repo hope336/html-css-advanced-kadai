@@ -1,0 +1,165 @@
+/* 基本のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ボディ全体の設定 */
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* ヘッダー全体 */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  /* ロゴ周り */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    height: 24px;
+    margin-right: 8px;
+  }
+  .logo span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #b66c00;
+  }
+  
+  /* PCナビゲーション */
+  #nav-pc ul {
+    list-style: none;
+    display: flex;
+  }
+  #nav-pc li {
+    margin-left: 20px;
+  }
+  #nav-pc a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* メインビジュアル */
+  .intro {
+    margin-top: 40px;
+  }
+  .intro h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .intro p {
+    margin-bottom: 20px;
+  }
+  .intro img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* スマホメニュー用初期状態（PC時） */
+  #menu-sp-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  #menu-sp {
+    display: none;
+  }
+  
+  /* スマホナビ初期状態（非表示） */
+  #nav-sp {
+    display: none;
+  }
+  
+  /* ==============================
+     スマホサイズ（767px以下）のスタイル
+  ================================ */
+  @media screen and (max-width: 767px) {
+    /* PC用ナビを非表示に */
+    #nav-pc {
+      display: none;
+    }
+  
+    /* ハンバーガーボタン表示 */
+    #menu-sp-button {
+      display: block;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+    }
+  
+    #menu-sp {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* スマホナビ全体 */
+    #nav-sp {
+      display: none;
+      background-color: #ce933e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 100;
+    }
+  
+    #nav-sp ul {
+      padding-left: 0;
+    }
+  
+    #nav-sp li {
+      list-style: none;
+      text-align: left;
+    }
+  
+    #close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  
+    #logo-sp {
+      display: block;
+      margin: 80px 30px 0px 20px;
+    }
+  
+    #nav-sp a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+  
+    #nav-sp a:hover {
+      text-decoration: underline;
+    }
+  
+    #nav-sp .menu {
+      background-image: url("images/arrow.png");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 12px 12px;
+      padding-right: 30px;
+    }
+  }
+  
